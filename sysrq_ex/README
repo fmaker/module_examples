@@ -1,0 +1,7 @@
+DESCRIPTION:
+Simple module to add a sysrq key handler to the key "x".
+
+USAGE:
+Two options
+1) Use the Sysrq key combo + x
+2) echo "x" > /proc/sysrq-trigger

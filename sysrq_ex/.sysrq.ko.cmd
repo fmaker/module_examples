@@ -1,0 +1,1 @@
+cmd_/home/fmaker/workspace/sysrq_ex/sysrq.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-2.6.38-13-generic/scripts/module-common.lds --build-id  -o /home/fmaker/workspace/sysrq_ex/sysrq.ko /home/fmaker/workspace/sysrq_ex/sysrq.o /home/fmaker/workspace/sysrq_ex/sysrq.mod.o

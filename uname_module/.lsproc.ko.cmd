@@ -1,0 +1,1 @@
+cmd_/home/fmaker/workspace/lsproc_module/lsproc.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-2.6.38-13-generic/scripts/module-common.lds --build-id  -o /home/fmaker/workspace/lsproc_module/lsproc.ko /home/fmaker/workspace/lsproc_module/lsproc.o /home/fmaker/workspace/lsproc_module/lsproc.mod.o
