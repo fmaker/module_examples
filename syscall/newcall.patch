@@ -1,0 +1,36 @@
+diff --git a/arch/x86/include/asm/unistd_64.h b/arch/x86/include/asm/unistd_64.h
+index ae69922..2010405 100644
+--- a/arch/x86/include/asm/unistd_64.h
++++ b/arch/x86/include/asm/unistd_64.h
+@@ -683,8 +683,6 @@ __SYSCALL(__NR_sendmmsg, sys_sendmmsg)
+ __SYSCALL(__NR_setns, sys_setns)
+ #define __NR_getcpu				309
+ __SYSCALL(__NR_getcpu, sys_getcpu)
+-#define __NR_newcall				310
+-__SYSCALL(__NR_newcall, sys_newcall)
+ 
+ #ifndef __NO_STUBS
+ #define __ARCH_WANT_OLD_READDIR
+diff --git a/kernel/sys.c b/kernel/sys.c
+index 6dc4f6b..1dbbe69 100644
+--- a/kernel/sys.c
++++ b/kernel/sys.c
+@@ -1913,18 +1913,3 @@ int orderly_poweroff(bool force)
+ 	return ret;
+ }
+ EXPORT_SYMBOL_GPL(orderly_poweroff);
+-
+-struct newstruct{
+-	void (*fp)(void);
+-};
+-struct newstruct newcall_struct;
+-EXPORT_SYMBOL_GPL(newcall_struct);
+-
+-SYSCALL_DEFINE0(newcall)
+-{
+-	if(newcall_struct.fp != NULL){
+-		newcall_struct.fp();
+-		return 0;
+-	}
+-	return -1;
+-}
