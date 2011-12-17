@@ -1,2 +1,2 @@
-/home/fmaker/workspace/uname_module/uname.ko
-/home/fmaker/workspace/uname_module/uname.o
+/home/fmaker/workspace/module_examples/uname_module/uname.ko
+/home/fmaker/workspace/module_examples/uname_module/uname.o

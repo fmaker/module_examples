@@ -1,2 +1,2 @@
-/home/fmaker/workspace/moddep_example/moddep_ex.ko
-/home/fmaker/workspace/moddep_example/moddep_ex.o
+/home/fmaker/workspace/module_examples/module_dependency/moddep_ex.ko
+/home/fmaker/workspace/module_examples/module_dependency/moddep_ex.o

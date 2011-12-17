@@ -1,2 +1,2 @@
-/home/fmaker/workspace/sysrq_ex/sysrq.ko
-/home/fmaker/workspace/sysrq_ex/sysrq.o
+/home/fmaker/workspace/module_examples/sysrq/sysrq.ko
+/home/fmaker/workspace/module_examples/sysrq/sysrq.o
