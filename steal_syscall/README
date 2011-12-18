@@ -1,0 +1,6 @@
+In order to steal a syscall using this module, on Linux version 2.6+ you have to get
+the address of the system call table (sys_call_table) and enter it into module/steal.c.
+
+This could of course be setup as a module parameter and grabbed at insertion time from
+either /lib/module/$(uname -r)/build/System.map or /proc/kallsyms. But, I'm too lazy to
+do that. I mean you shouldn't be doing this anyways, so who cares?
