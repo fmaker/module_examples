@@ -22,7 +22,7 @@
 
 static int __init NAME_init(void)
 {
-  return 0;
+	return 0;
 }
 module_init(NAME_init);
 
