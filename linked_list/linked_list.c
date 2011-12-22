@@ -48,7 +48,7 @@ module_init(linked_list_init);
 static void __exit linked_list_exit(void)
 {
 	int i;
-	struct list_head *p;
+	struct list_head *p,*n;
 	struct int_node *node;
 
 	/* printk(KERN_INFO "==========START_EXIT============");
@@ -64,12 +64,11 @@ static void __exit linked_list_exit(void)
 	}
 
 	i=0;
-
-	while(!list_empty(&head)){
+	list_for_each_safe(p, n, &head){ 
 
 		/* printk(KERN_INFO "Head is: %p...\n",&head);
 		 * printk(KERN_INFO "Head->next is: %p...\n",head.next); */
-		node = list_entry(head.next, struct int_node, list);
+		node = list_entry(p, struct int_node, list);
 
 		/* printk(KERN_INFO "Removing node[%d] = %p...\n",i,node); */
 		list_del(&node->list);
